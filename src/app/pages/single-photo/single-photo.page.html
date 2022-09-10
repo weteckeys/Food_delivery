@@ -1,0 +1,28 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Photo</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <div class="flex_div">
+            <div class="user_back" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+            <div class="user_detail">
+                <ion-label class="bold_lbl">Elvin Sharvill</ion-label>
+                <ion-label class="grey_lbl">45 Reviews, 120 Followers</ion-label>
+            </div>
+            <ion-button fill="outline" shape="round" size="small">
+                Follow
+            </ion-button>
+        </div>
+        <div class="back_img" [style.backgroundImage]="'url(assets/imgs/food1.jpg)'"></div>
+        <div class="comment_div">
+            <ion-icon name="thumbs-up-sharp" class="thumb_icn"></ion-icon>
+            <ion-icon name="chatbubble-outline" class="chat_icn" (click)="goToAddComment()"></ion-icon>
+        </div>
+    </div>
+</ion-content>

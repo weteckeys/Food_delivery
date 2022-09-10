@@ -1,0 +1,16 @@
+<ion-content>
+    <div class="main_content_div">
+
+        <ion-slides>
+            <ion-slide *ngFor="let item of slides">
+                <div class="inner_slider">
+                    <img src="{{item.img}}">
+                    <ion-label class="bold_lbl">{{item.title}}</ion-label>
+                    <ion-label class="simple_lbl">{{item.subTitle}}</ion-label>
+                    <ion-button expand="block" (click)="goToLogin()">Login</ion-button>
+                </div>
+            </ion-slide>
+        </ion-slides>
+
+    </div>
+</ion-content>

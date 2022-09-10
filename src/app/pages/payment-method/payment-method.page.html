@@ -1,0 +1,50 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" slot="start" fill="clear">
+            <ion-icon name="arrow-back-sharp" style="color: black;"></ion-icon>
+        </ion-button>
+        <ion-title>Payment Method</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+    
+        <ion-label class="title_lbl">Your Cards</ion-label>
+
+        <ion-label class="add_lbl" (click)="goToAddCard()">+ Add Card</ion-label>
+
+        <ion-radio-group value="card1" mode="md">
+
+            <div class="card_div">
+                <ion-radio value="card1"></ion-radio>
+                <div>
+                <ion-label class="small_lbl">Personal</ion-label>
+                <ion-label class="card_lbl">XXXX-XXXX-XXXX-1234</ion-label>
+                </div>
+            </div>
+
+            <div class="card_div">
+                <ion-radio value="card2"></ion-radio>
+                <div>
+                <ion-label class="small_lbl">Office</ion-label>
+                <ion-label class="card_lbl">XXXX-XXXX-XXXX-1234</ion-label>
+                </div>
+            </div>
+
+            <div class="card_div">
+                <ion-radio value="card3"></ion-radio>
+                <div>
+                <ion-label class="small_lbl">Father</ion-label>
+                <ion-label class="card_lbl">XXXX-XXXX-XXXX-1234</ion-label>
+                </div>
+            </div>
+
+        </ion-radio-group>
+        
+        <ion-button expand="block">
+            Set Default Card
+        </ion-button>
+  
+    </div>
+  </ion-content>

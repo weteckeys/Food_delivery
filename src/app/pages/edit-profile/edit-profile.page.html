@@ -1,0 +1,23 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+      <ion-button (click)="goBack()" slot="start" fill="clear">
+          <ion-icon name="arrow-back-sharp" style="color: black;"></ion-icon>
+      </ion-button>
+      <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-content>
+        <div class="main_content_div">
+            <div class="back_user" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+            <ion-input type="text" placeholder="Name"></ion-input>
+            <ion-input type="email" placeholder="Email ID"></ion-input>
+            <ion-input type="number" placeholder="Phone Number"></ion-input>
+            <ion-input type="text" placeholder="City"></ion-input>
+            <ion-button (click)="goToProfile()" expand="block">
+              Click me
+            </ion-button>
+        </div>
+    </ion-content>
+</ion-content>

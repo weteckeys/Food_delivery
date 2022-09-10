@@ -1,0 +1,33 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-button (click)="goToBack()" slot="start" fill="clear">
+            <ion-icon name="arrow-back-sharp"></ion-icon>
+        </ion-button>
+        <ion-title>Add Comment</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="comment_box" *ngFor="let item of users">
+            <div class="user_back" [style.backgroundImage]="'url('+ item.img +')'"></div>
+            <div class="user_detail">
+                <ion-label class="name_lbl">Elvin Sharvill</ion-label>
+                <ion-label class="comment_lbl">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </ion-label>
+                <ion-label class="time_lbl">2 days ago</ion-label>
+            </div>
+        </div>
+
+    </div>
+</ion-content>
+
+<ion-footer style="background: white;">
+    <div class="footer_div">
+        <ion-input type="text" placeholder="Type Something"></ion-input>
+        <ion-icon name="send-sharp" slot="end"></ion-icon>
+    </div>
+</ion-footer>

@@ -1,0 +1,37 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+      <ion-button (click)="goBack()" slot="start" fill="clear">
+          <ion-icon name="arrow-back-sharp" style="color: black;"></ion-icon>
+      </ion-button>
+      <ion-title>Add Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-content>
+        <div class="main_content_div">
+            <ion-label class="bold_lbl">Enter Card Detail</ion-label>
+
+            <ion-label class="small_lbl">Card Holder Name</ion-label>
+            <ion-input type="text" placeholder="Card Holder Name"></ion-input>
+
+            <ion-label class="small_lbl">Card Number</ion-label>
+            <ion-input type="number" placeholder="Card No"></ion-input>
+
+            <ion-row>
+                <ion-col size="6" style="padding-left: 0px;">
+                    <ion-label class="small_lbl">CVC</ion-label>
+                    <ion-input type="number" placeholder="CVC"></ion-input>
+                </ion-col>
+                <ion-col size="6" style="padding-right: 0px;">
+                    <ion-label class="small_lbl">Expiry Date</ion-label>
+                    <ion-datetime display-format="MM/YYYY" placeholder="MM/YYYY"></ion-datetime>
+                </ion-col>
+            </ion-row>
+            
+            <ion-button (click)="goToProfile()" expand="block">
+                Add Card
+            </ion-button>
+        </div>
+    </ion-content>
+</ion-content>

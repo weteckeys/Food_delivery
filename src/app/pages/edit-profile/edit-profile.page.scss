@@ -1,0 +1,38 @@
+ion-toolbar {
+    ion-button {
+        --color: cadetblue;
+    }
+}
+.main_content_div {
+    padding: 16px;
+
+    ion-label {
+        display: block;
+    }
+
+    .back_user {
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    ion-input {
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+        margin-bottom: 16px;
+        border-radius: 3px;
+        height: 50px;
+        --padding-start: 16px;
+        --padding-end: 16px;
+    }
+    ion-button {
+        height: 50px;
+        --border-radius: 3px
+    }
+}

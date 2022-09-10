@@ -1,0 +1,51 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-button (click)="goToBack()" slot="start" fill="clear">
+            <ion-icon name="arrow-back-sharp" style="color: black;"></ion-icon>
+        </ion-button>
+        <ion-title>All Photos</ion-title>
+        <ion-button (click)="changeView()" fill="clear" size="small" slot="end">
+            <ion-icon name="apps-sharp" *ngIf="isGridView == true" style="color: black;"></ion-icon>
+            <ion-icon name="list" *ngIf="isGridView == false" style="color: black;"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="main_content_div1" *ngIf="isGridView == true">
+        <ion-grid fixed>
+            <ion-row>
+                <ion-col size="4">
+                    <div class="back_image_color">
+                        <ion-icon name="camera-outline"></ion-icon>
+                    </div>
+                </ion-col>
+                <ion-col size="4" *ngFor="let item of images" (click)="openSinglePhoto()">
+                    <div class="back_image" [style.backgroundImage]="'url('+ item +')'"></div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+    <div class="main_content_div2" *ngIf="isGridView == false">
+        <div class="card_div" *ngFor="let item of images">
+            <div class="flex_div">
+                <div class="user_back" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+                <div class="user_detail">
+                    <ion-label class="bold_lbl">Elvin Sharvill</ion-label>
+                    <ion-label class="grey_lbl">45 Reviews, 120 Followers</ion-label>
+                </div>
+                <ion-button fill="outline" shape="round" size="small">
+                  Follow
+                </ion-button>
+            </div>
+            <div class="back_img" [style.backgroundImage]="'url('+ item +')'"></div>
+            <div class="comment_div">
+                <ion-icon name="thumbs-up-sharp" class="thumb_icn"></ion-icon>
+                <ion-icon name="chatbubble-outline" class="chat_icn" (click)="goToAddComment()"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+</ion-content>

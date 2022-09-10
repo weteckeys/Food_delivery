@@ -1,0 +1,62 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+      <ion-button (click)="goBack()" slot="start" fill="clear">
+          <ion-icon name="arrow-back-sharp" style="color: black;"></ion-icon>
+      </ion-button>
+      <ion-title>Address</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+  
+      <ion-label class="title_lbl">Your Addresses</ion-label>
+
+      <ion-label class="add_lbl" (click)="goToAddAddress()">+ Add Address</ion-label>
+
+      <ion-radio-group value="card1" mode="md">
+
+          <div class="card_div">
+              <div>
+                  <ion-radio value="card1"></ion-radio>
+              </div>
+              <div style="margin-left: 16px;">
+                  <ion-label class="bold_lbl">Home</ion-label>
+                  <ion-label class="small_lbl">
+                      1234, Eva surbhi complex, aksharwadi road, Bhavnagar - 364001.
+                  </ion-label>
+              </div>
+          </div>
+
+          <div class="card_div">
+              <div>
+                  <ion-radio value="card2"></ion-radio>
+              </div>
+              <div style="margin-left: 16px;">
+                <ion-label class="bold_lbl">Office</ion-label>
+                <ion-label class="small_lbl">
+                    1234, Eva surbhi complex, aksharwadi road, Bhavnagar - 364001.
+                </ion-label>
+              </div>
+          </div>
+
+          <div class="card_div">
+              <div>
+                  <ion-radio value="card3"></ion-radio>
+              </div>
+              <div style="margin-left: 16px;">
+                <ion-label class="bold_lbl">Other</ion-label>
+                <ion-label class="small_lbl">
+                  1234, Eva surbhi complex, aksharwadi road, Bhavnagar - 364001.
+                </ion-label>
+              </div>
+          </div>
+
+      </ion-radio-group>
+      
+      <ion-button expand="block">
+          Set Default Address
+      </ion-button>
+
+  </div>
+</ion-content>

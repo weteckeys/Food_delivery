@@ -1,0 +1,40 @@
+.main_content_div {
+    width: 100%;
+    padding: 16px;
+    height: 100%;
+
+    ion-label {
+        display: block;
+    }
+
+    .bold_lbl {
+        font-size: 20px;
+        font-family: 'semi-bold';
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .grey_lbl {
+        color: grey;
+        font-size: 14px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    ion-input {
+        font-family: 'semi-bold';
+        border-bottom: 1px solid lightgrey;
+        margin-bottom: 16px;
+    }
+
+    ion-button {
+        margin-top: 40px;
+        margin-bottom: 16px;
+    }
+
+    .small_lbl {
+        text-align: center;
+        font-size: 14px;
+        color: cadetblue;
+    }
+}

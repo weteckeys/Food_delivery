@@ -1,0 +1,55 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-button (click)="goToBack()" slot="start" fill="clear">
+            <ion-icon name="arrow-back-sharp"></ion-icon>
+        </ion-button>
+        <ion-title>Review</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <div class="review_div">
+            <div class="user_flex">
+                <div class="user_back" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+                <div class="user_detail">
+                    <ion-label class="username">Kelly West</ion-label>
+                    <ion-label class="grey_review">120 Reviews, 200 Followers</ion-label>
+                </div>
+                <ion-button expand="block" fill="outline" shape="round" size="small">
+                    Follow
+                </ion-button>
+            </div>
+
+            <div class="rating_flex">
+                <div class="star_flex">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-label>4.0</ion-label>
+                </div>
+                <div class="comment_flex">
+                    <ion-icon name="thumbs-up-sharp" class="thumb_icn"></ion-icon>
+                    <ion-icon name="chatbubble-outline" class="chat_icn"></ion-icon>
+                </div>
+            </div>
+
+            <ion-label class="comment_text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer electronic typesetting.
+            </ion-label>
+
+            <ion-grid fixed>
+                <ion-row>
+                    <ion-col size="3" *ngFor="let item of images; let i = index">
+                        <div [style.backgroundImage]="'url('+ item +')'" class="photo_back"></div>    
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,48 @@
+.main_content_div {
+    padding: 16px;
+
+    ion-label {
+        display: block;
+    }
+
+    .title_lbl {
+        font-size: 18px;
+        font-family: 'semi-bold';
+    }
+
+    .add_lbl {
+        color: cadetblue;
+        text-align: right;
+        margin-bottom: 16px;
+    }
+
+    .card_div {
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        border-radius: 3px;
+
+        div {
+            margin-left: 16px;
+
+            .small_lbl {
+                font-size: 14px;
+                color: grey;
+            }
+            .card_lbl {
+                font-family: 'semi-bold';
+            }
+        }
+    }
+
+    ion-button {
+        --border-radius: 3px;
+        font-family: 'semi-bold';
+        display: block;
+        margin: auto;
+        margin-bottom: 30px;
+        margin-top: 16px;
+    }
+}

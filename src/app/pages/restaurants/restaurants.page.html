@@ -1,0 +1,36 @@
+<ion-content>
+    <div class="main_content_div">
+        <div class="back_img" [style.backgroundImage]="'url(assets/imgs/food1.jpg)'">
+            <div class="gradient_div">
+                <ion-icon name="arrow-back" (click)="goToBack()"></ion-icon>
+                <ion-label class="name_lbl">Blacksmith Cafe</ion-label>
+            </div>
+        </div>
+        <div class="header_div">
+            <ion-label [class.active]="tabID == 1">Italian</ion-label>
+            <ion-label [class.active]="tabID == 2">Mexican</ion-label>
+            <ion-label [class.active]="tabID == 3">South Indian</ion-label>
+            <ion-label [class.active]="tabID == 4">Chinese</ion-label>
+            <ion-label [class.active]="tabID == 5">Panjabi</ion-label>
+            <ion-label [class.active]="tabID == 5">Gujrati</ion-label>
+        </div>
+        
+        <div class="card_box" *ngFor="let item of restaurants">
+            <div class="back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+            <div class="detail_div">
+                <ion-label class="bold_name">Good Thai</ion-label>
+                <ion-label class="addr_lbl">1234, Eva surbhi complex, Aksharwadi Road, Bhavnagar.</ion-label>
+            </div>
+            <div class="last_div">
+                <div class="color_box"><ion-label>4.5</ion-label></div>
+                <ion-icon name="bag-add"></ion-icon>
+            </div>
+        </div>
+
+    </div>
+</ion-content>
+<ion-footer>
+    <div class="btn_div" (click)="goToCart()">
+        <ion-label>Go to Cart</ion-label>
+    </div>
+</ion-footer>

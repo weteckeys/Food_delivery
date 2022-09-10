@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>all-photo-list</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <div class="card_div" *ngFor="let item of images">
+            <div class="flex_div">
+                <div class="user_back" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+                <div class="user_detail">
+                    <ion-label class="bold_lbl">Elvin Sharvill</ion-label>
+                    <ion-label class="grey_lbl">45 Reviews, 120 Followers</ion-label>
+                </div>
+                <ion-button fill="outline" shape="round" size="small">
+                  Follow
+                </ion-button>
+            </div>
+            <div class="back_img" [style.backgroundImage]="'url('+ item +')'"></div>
+            <div class="comment_div">
+                <ion-icon name="thumbs-up-sharp" class="thumb_icn"></ion-icon>
+                <ion-icon name="chatbubble-outline" class="chat_icn" (click)="goToAddComment()"></ion-icon>
+            </div>
+        </div>
+    </div>
+</ion-content>

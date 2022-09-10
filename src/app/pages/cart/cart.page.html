@@ -1,0 +1,55 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" slot="start" fill="clear">
+            <ion-icon name="arrow-back-sharp" style="color: black;"></ion-icon>
+        </ion-button>
+        <ion-title>My Cart</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <div class="header_div">
+            <ion-label>2 Items in cart</ion-label>
+        </div>
+
+        <div class="card_box" *ngFor="let item of (restaurants | slice: 0: 2)">
+            <div class="back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+
+            <div class="detail_div">
+                <ion-label class="bold_name">Good Thai</ion-label>
+                <ion-label class="addr_lbl">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </ion-label>
+
+                <div class="flex_div">
+                    <ion-label class="price_lbl">Rs. 200</ion-label>
+                    <div class="add_del">
+                        <div class="btn_div" style="background-color: cadetblue;" (click)="plus()">
+                            <ion-icon name="add"></ion-icon>
+                        </div>
+                        <ion-label>{{qty}}</ion-label>
+                        <div class="btn_div" style="background: lightcoral;" (click)="minus()">
+                            <ion-icon name="remove"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="amout_detail">
+            <ion-label>Good Thai X 2 <span>Rs. 400</span></ion-label>
+            <ion-label>Good Thai X 3 <span>Rs. 600</span></ion-label>
+            <ion-label>Shipping Charge <span>Rs. 40</span></ion-label>
+            <ion-label style="font-family: 'semi-bold';">Total Amount <span>Rs. 1040</span></ion-label>
+        </div>
+
+        <div class="btn_div">
+            <ion-button expand="block" (click)="goToPaymemt()">
+                Confirm Order
+            </ion-button>
+        </div>
+
+    </div>
+</ion-content>

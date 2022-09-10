@@ -1,0 +1,44 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-title>Near By</ion-title>
+        <ion-button (click)="changeView()" fill="clear" size="small" slot="end">
+            <ion-icon name="map" *ngIf="isMap == true"></ion-icon>
+            <ion-icon name="list" *ngIf="isMap == false"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+
+    <div class="my_header">
+        <div class="loc_flex">
+            <ion-icon name="location"></ion-icon>
+            <ion-label>Sdyney CBD</ion-label>
+        </div>
+        <div class="header_search">
+            <ion-input type="text" placeholder="Search for Restautants..">
+                <ion-icon name="search"></ion-icon>
+            </ion-input>
+        </div>
+    </div>
+
+</ion-header>
+
+<ion-content>
+
+    <div class="map_content_div" *ngIf="isMap == true">
+        <div #map id="map"></div>
+    </div>
+    
+    <div class="main_content_div" *ngIf="isMap == false">
+        <div class="card_box" *ngFor="let item of [1,2,3,4,5]" (click)="goToRestDetail()">
+            <div class="detail_div">
+                <ion-label class="bold_name">Good Thai</ion-label>
+                <ion-label class="grey_lbl">10:30AM to 10:00 PM</ion-label>
+                <ion-label class="addr_lbl">1234, Eva surbhi complex, Aksharwadi Road, Bhavnagar.</ion-label>
+            </div>
+            <div class="last_div">
+                <div class="color_box"><ion-label>4.5</ion-label></div>
+                <ion-icon name="bookmark"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+</ion-content>

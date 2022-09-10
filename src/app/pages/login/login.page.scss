@@ -1,0 +1,39 @@
+.main_content_div {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+
+    ion-label {
+        display: block;
+    }
+
+    .bold_lbl {
+        font-size: 20px;
+        font-family: 'semi-bold';
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    ion-input {
+        font-family: 'semi-bold';
+        border-bottom: 1px solid lightgrey;
+        margin-bottom: 16px;
+    }
+
+    .forgot_lbl {
+        text-align: right;
+        font-size: 14px;
+        // color: lightseagreen;
+        color: cadetblue;
+        margin-bottom: 16px;
+    }
+    .bottom_lbl {
+        font-size: 14px;
+        // color: lightseagreen;
+        color: cadetblue;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

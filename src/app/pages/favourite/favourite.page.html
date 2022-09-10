@@ -1,0 +1,20 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-title>Favourite</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <div class="card_box" *ngFor="let item of restaurants" (click)="goToRestDetail()">
+            <div class="back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+            <div class="detail_div">
+                <ion-label class="bold_name">Good Thai</ion-label>
+                <ion-label class="grey_lbl">10:30AM to 10:00 PM</ion-label>
+                <ion-label class="addr_lbl">1234, Eva surbhi complex, Aksharwadi Road, Bhavnagar.</ion-label>
+                <div class="color_box"><ion-label>4.5</ion-label></div>
+                <ion-icon name="bookmark"></ion-icon>
+            </div>
+        </div>
+    </div>
+</ion-content>

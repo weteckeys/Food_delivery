@@ -1,0 +1,40 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-button (click)="goToBack()" slot="start" fill="clear">
+            <ion-icon name="arrow-back-sharp" style="color: black;"></ion-icon>
+        </ion-button>
+        <ion-title>Collections</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="back_img" [style.backgroundImage]="'url(assets/imgs/food1.jpg)'">
+            <div class="grey_div">
+                <div class="abs_div">
+                    <div class="yellow_div"></div>
+                    <ion-label class="bold_lbl">Health</ion-label>
+                    <ion-label class="small_lbl">12 Places</ion-label>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_div">
+            <ion-row>
+                <ion-col size="6" *ngFor="let item of foodSlider; let i = index" [class.left-pad]="i % 2 == 1" [class.right-pad]="i % 2 == 0" (click)="goToRestList()">
+                    <div class="back_img" [style.backgroundImage]="'url('+ item.img +')'">
+                        <div class="grey_div">
+                            <div class="abs_div">
+                                <div class="yellow_div"></div>
+                                <ion-label class="bold_lbl">Burger</ion-label>
+                                <ion-label class="small_lbl">12 Places</ion-label>
+                            </div>
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+
+    </div>
+</ion-content>

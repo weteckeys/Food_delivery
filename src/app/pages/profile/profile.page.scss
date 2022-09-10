@@ -1,0 +1,49 @@
+ion-toolbar {
+    ion-button {
+        --color: cadetblue;
+    }
+}
+.main_content_div {
+    padding: 16px;
+
+    ion-label {
+        display: block;
+    }
+
+    .back_user {
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        margin: auto;
+        margin-top: 40px;
+    }
+
+    .name_lbl {
+        font-family: 'semi-bold';
+        text-align: center;
+        margin-top: 10px;
+    }
+    .location_lbl {
+        font-size: 14px;
+        color: grey;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .flex_div {
+        border-bottom: 1px solid lightgrey;
+        height: 56px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ion-icon {
+            color: lightgrey;
+            font-size: 20px;
+        }
+    }
+}

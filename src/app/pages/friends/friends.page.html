@@ -1,0 +1,23 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-button (click)="goToBack()" slot="start" fill="clear">
+            <ion-icon name="arrow-back-sharp" style="color: black;"></ion-icon>
+        </ion-button>
+        <ion-title>Friends</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <div class="user_div" *ngFor="let item of users">
+            <div class="user_back" [style.backgroundImage]="'url('+ item.img +')'"></div>
+            <div class="user_detail">
+                <ion-label class="bold_lbl">Elvin Sharvill</ion-label>
+                <ion-label class="grey_lbl">Lorem ipsum</ion-label>
+            </div>
+            <ion-button fill="outline" shape="round" size="small">
+                Follow
+            </ion-button>
+        </div>
+    </div>
+</ion-content>

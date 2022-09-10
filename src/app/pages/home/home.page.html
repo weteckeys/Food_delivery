@@ -1,0 +1,83 @@
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Sdyney CBD</ion-title>
+    </ion-toolbar>
+    <div class="header_search">
+      <ion-input type="text" placeholder="Search for Restautants..">
+          <ion-icon name="search"></ion-icon>
+      </ion-input>
+    </div>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <ion-slides pager="ios" class="home_slider">
+            <ion-slide *ngFor="let item of foodSlider" (click)="goToTrending()">
+                <div class="slider_back" [style.backgroundImage]="'url('+ item.img +')'">
+                  <div class="gradient_div">
+                      <div class="abs_div">
+                          <ion-label class="bold_lbl">Thai Style</ion-label>
+                          <ion-label class="small_lbl">12 Places</ion-label>
+                      </div>
+                  </div>
+                </div>
+            </ion-slide>
+        </ion-slides>
+
+        <div class="content_div">
+            <div class="header_div">
+                <ion-label Class="title_lbl">Most Popular</ion-label>
+                <ion-label Class="view_lbl">See All</ion-label>
+            </div>
+
+            <div class="custom_slider">
+                <div class="slide_box" *ngFor="let item of foodSlider" (click)="goToRest()">
+                    <div class="slide1_img" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                    <div class="detail1_div">
+                        <ion-label class="bold_lbl">Green House</ion-label>
+                        <ion-label class="grey_lbl">122 Queen Steet</ion-label>
+                        <ion-label class="small_lbl">Fried chicken, American</ion-label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_div">
+                <ion-label Class="title_lbl">Meal Deals</ion-label>
+                <ion-label Class="view_lbl" (click)="goToCollection()">See All</ion-label>
+            </div>
+
+            <div class="custom_slider">
+                <div class="slide_box" *ngFor="let item of foodSlider" (click)="goToRest()">
+                    <div class="slide2_img" [style.backgroundImage]="'url('+ item.img +')'">
+                        <div class="gradient_div">
+                            <div class="detail2_div">
+                              <div class="yellow_div"></div>
+                              <ion-label class="bold_lbl">Green House</ion-label>
+                              <ion-label class="small_lbl">122 Queen Steet</ion-label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_div">
+                <ion-label Class="title_lbl">Popular Restaurants</ion-label>
+                <ion-label Class="view_lbl" (click)="goToAllRest()">See All</ion-label>
+            </div>
+
+            <div class="custom_slider">
+                <div class="slide_box" *ngFor="let item of foodSlider" (click)="goToRest()">
+                    <div class="slide3_img" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                </div>
+            </div>
+
+        </div>
+
+        
+
+    </div>
+</ion-content>

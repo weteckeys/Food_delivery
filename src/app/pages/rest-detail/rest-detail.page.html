@@ -1,0 +1,102 @@
+<ion-content>
+    <div class="main_content_div">
+        <div class="back_img" [style.backgroundImage]="'url(assets/imgs/food1.jpg)'">
+            <div class="gradient_div">
+                <ion-icon name="arrow-back" (click)="goToBack()"></ion-icon>
+                <ion-label class="name_lbl">Blacksmith Cafe</ion-label>
+            </div>
+        </div>
+
+        <ion-button expand="block" class="order_btn" (click)="goToRest()">
+            Order Food Online
+        </ion-button>
+
+        <div class="flex_div">
+            <div class="inner_div">
+                <ion-icon name="share-social-outline"></ion-icon>
+                <ion-label>share</ion-label>
+            </div>
+            <div class="inner_div" (click)="goToAddComment()">
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-label>Review</ion-label>
+            </div>
+            <div class="inner_div">
+                <ion-icon name="camera-outline"></ion-icon>
+                <ion-label>Photo</ion-label>
+            </div>
+        </div>
+
+        <div class="map"></div>
+
+        <div class="content_div">
+            <ion-label class="detail_lbl">Call <span>9876543212</span></ion-label>
+            <ion-label class="detail_lbl">Cuisines <span>American, Cafe</span></ion-label>
+            <ion-label class="detail_lbl">Average Cost <span>$20 - $50</span></ion-label>
+
+            <div class="header_div">
+                <ion-label class="bold_lbl">Photos</ion-label>
+                <ion-label class="green_lbl">+ Add</ion-label>
+            </div>
+
+            <ion-row>
+                <ion-col size="3" *ngFor="let item of images; let i = index" (click)="goToAllPhotos()">
+                    <div [style.backgroundImage]="'url('+ item.img +')'" class="photo_back"></div>
+                    <ion-label class="photo_lbl">{{item.name}}</ion-label>
+                    <ion-label class="loc_lbl">(80)</ion-label> 
+                </ion-col>
+            </ion-row>
+
+        </div>
+
+        <ion-label class="title_lbl">Review</ion-label>
+
+        <div class="review_div" *ngFor="let item of [1,2,3]">
+            <div class="user_flex">
+                <div class="user_back" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+                <div class="user_detail">
+                    <ion-label class="username">Kelly West</ion-label>
+                    <ion-label class="grey_review">120 Reviews, 200 Followers</ion-label>
+                </div>
+                <ion-button expand="block" fill="outline" shape="round" size="small">
+                    Follow
+                </ion-button>
+            </div>
+
+            <span (click)="goToReviewDetail()">
+                <div class="rating_flex">
+                    <div class="star_flex">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-label>4.0</ion-label>
+                    </div>
+                    <div class="comment_flex">
+                        <ion-icon name="thumbs-up-sharp" class="thumb_icn"></ion-icon>
+                        <ion-icon name="chatbubble-outline" class="chat_icn"></ion-icon>
+                    </div>
+                </div>
+                <ion-label class="comment_text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer electronic typesetting... <span class="read_span">Read more..</span>
+                </ion-label>
+
+                <ion-row>
+                    <ion-col size="3" *ngFor="let item of (images | slice: 0:4); let i = index">
+                        <div [style.backgroundImage]="'url('+ item.img +')'" class="photo_back">
+                            <div class="overlay_div" *ngIf="i == 3">
+                                <ion-label>+ 12</ion-label>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+            </span>
+        </div>
+
+        <ion-label class="all_review_lbl" (click)="goToAllReviews()">Read All (123)</ion-label>
+
+    </div>
+</ion-content>

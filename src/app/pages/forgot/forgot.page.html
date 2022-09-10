@@ -1,0 +1,45 @@
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button (click)="goToBack()" slot="start" fill="clear">
+            <ion-icon name="arrow-back-sharp"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div *ngIf="tabID == 1">
+            <ion-label class="bold_lbl">Fogot Password ?</ion-label>
+            <ion-label class="grey_lbl">Please enter your email</ion-label>
+            <ion-input type="text" placeholder="Email"></ion-input>
+            <ion-button expand="block" (click)="tabID = 2">
+                Sumbit
+            </ion-button>
+        </div>
+
+        <div *ngIf="tabID == 2">
+            <ion-label class="bold_lbl">Verify OTP</ion-label>
+            <ion-label class="grey_lbl">Please enter your OTP</ion-label>
+            <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:4}"></ng-otp-input>
+            <ion-button expand="block" (click)="tabID = 3">
+                Sumbit
+            </ion-button>
+            <ion-label class="small_lbl">Resend OTP</ion-label>
+        </div>
+
+        <div *ngIf="tabID == 3">
+            <ion-label class="bold_lbl">Set New Password</ion-label>
+            <ion-label class="grey_lbl">Please enter new password</ion-label>
+            <ion-input type="text" placeholder="Email"></ion-input>
+
+            <ion-label class="grey_lbl">Please enter confirm password</ion-label>
+            <ion-input type="text" placeholder="Email"></ion-input>
+
+            <ion-button expand="block" (click)="goToLogin()">
+                Change Password
+            </ion-button>
+        </div>
+
+    </div>
+</ion-content>

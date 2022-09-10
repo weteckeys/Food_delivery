@@ -1,0 +1,31 @@
+.main_content_div {
+    padding: 16px;
+
+    ion-label {
+        display: block;
+    }
+    .title_lbl {
+        font-size: 24px;
+        font-family: 'bold';
+        padding-bottom: 10px;
+        border-bottom: 1px solid lightgray;
+    }
+    .grey_lbl {
+        color: grey;
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+
+    ion-item{
+        --background: transparent;
+        --padding-start: 0px;
+        --inner-padding-end: 0px;
+    }
+    .apply_btn {
+        margin-top: 16px;
+        color: black;
+    }
+    .clear_btn {
+        color: lightgrey;
+    }
+}

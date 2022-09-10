@@ -1,0 +1,24 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-button (click)="goToBack()" slot="start" fill="clear">
+            <ion-icon name="arrow-back-sharp"></ion-icon>
+        </ion-button>
+        <ion-title>Discovery</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <ion-grid fixed style="padding: 0;">
+            <ion-row>
+                <ion-col size="6" *ngFor="let item of discover; let i = index" (click)="selectTab(i)" [class.left-pad]="i % 2 == 1" [class.right-pad]="i % 2 == 0">
+                    <div class="inner_div" [class.active]="selectID == i">
+                        <img src="{{item.img}}">
+                        <ion-label class="bold_lbl">{{item.name}}</ion-label>
+                        <ion-label class="loc_lbl">{{item.place}}</ion-label>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

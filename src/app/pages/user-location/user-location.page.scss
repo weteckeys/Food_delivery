@@ -1,0 +1,25 @@
+.main_content_div {
+    width: 100%;
+    padding: 16px;
+
+    ion-input, ion-searchbar{
+        font-family: 'semi-bold';
+        border-bottom: 1px solid lightgrey;
+        margin-bottom: 20px;
+    }
+
+    .title_lbl {
+        font-family: 'semi-bold';
+    }
+    ion-item {
+        --padding-start: 0px;
+        --inner-padding-end: 0px;
+
+        .item-inner {
+            padding: 0px !important;
+        }
+        img {
+            width: 22px;
+        }
+    }
+}

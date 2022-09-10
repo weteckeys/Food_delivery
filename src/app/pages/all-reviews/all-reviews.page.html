@@ -1,0 +1,61 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-button (click)="goToBack()" slot="start" fill="clear">
+            <ion-icon name="arrow-back-sharp" style="color: black;"></ion-icon>
+        </ion-button>
+        <ion-title>Reviews</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="review_div" *ngFor="let item of users">
+            <div class="user_flex">
+                <div class="user_back" [style.backgroundImage]="'url('+ item +')'"></div>
+                <div class="user_detail">
+                    <ion-label class="username">Kelly West</ion-label>
+                    <ion-label class="grey_review">120 Reviews, 200 Followers</ion-label>
+                </div>
+                <ion-button expand="block" fill="outline" shape="round" size="small">
+                    Follow
+                </ion-button>
+            </div>
+
+            <span (click)="goToReviewDetail()">
+                <div class="rating_flex">
+                    <div class="star_flex">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-label>4.0</ion-label>
+                    </div>
+                    <div class="comment_flex">
+                        <ion-icon name="thumbs-up-sharp" class="thumb_icn"></ion-icon>
+                        <ion-icon name="chatbubble-outline" class="chat_icn"></ion-icon>
+                    </div>
+                </div>
+
+                <ion-label class="comment_text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer electronic typesetting... <span class="read_span">Read more..</span>
+                </ion-label>
+
+                <div class="photo_flex">
+                    <div class="image_flex" *ngFor="let item of (images | slice: 0:4); let i = index">
+                        <div [style.backgroundImage]="'url('+ item.img +')'" class="photo_back">
+                            <div class="overlay_div" *ngIf="i == 3">
+                                <ion-label>+ 12</ion-label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </span>
+
+        </div>
+
+    </div>
+</ion-content>

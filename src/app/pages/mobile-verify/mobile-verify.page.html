@@ -1,0 +1,10 @@
+<ion-content>
+    <div class="main_content_div">
+        <ion-label class="bold_lbl">Verify your Mobile</ion-label>
+        <ion-label class="grey_lbl">Enter your code here</ion-label>
+        <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:4}"></ng-otp-input>
+        <ion-button expand="block" (click)="goToUserLocation()">
+            Verify Now
+        </ion-button>
+    </div>
+</ion-content>

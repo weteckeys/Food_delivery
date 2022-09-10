@@ -1,0 +1,49 @@
+ion-content {
+    --background: #F2F2F4;
+}
+.main_content_div {
+    width: 100%;
+
+    ion-label {
+        display: block;
+    }
+
+    .user_div {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 10px;
+        background: white;
+        // box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+
+        .user_back {
+            height: 45px;
+            width: 45px;
+            background-position: top;
+            border-radius: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .user_detail {
+            padding-left: 10px;
+            position: relative;
+
+            .bold_lbl {
+                font-family: 'semi-bold';
+            }
+            .grey_lbl {
+                color: grey;
+                font-size: 14px;
+            }
+        }
+
+        ion-button {
+            color: cadetblue;
+            --border-color: cadetblue;
+            --border-radius: 25px;
+            position: absolute;
+            right: 16px;
+        }
+    }
+}

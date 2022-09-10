@@ -1,0 +1,51 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-button (click)="goToBack()" slot="start" fill="clear">
+            <ion-icon name="arrow-back-sharp"></ion-icon>
+        </ion-button>
+        <ion-title>User Current Location</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <ion-input type="text" placeholder="Search the city.."
+            (ionInput)="onSearchChange1($event)" 
+            autocomplete = "on"
+            showCancelButton="never"
+            mode="ios"
+            [(ngModel)]="autocomplete1.query"
+        ></ion-input>
+    
+        <!-- <ion-searchbar 
+          placeholder="Why is an exact location better ?" 
+          showCancelButton="never"
+          (ionInput)="onSearchChange1($event)" 
+          autocomplete = "on"
+          showCancelButton="never"
+          mode="ios"
+          [(ngModel)]="autocomplete1.query"
+        >
+        </ion-searchbar> -->
+
+        <ion-list style="margin-bottom: 16px;">
+            <ion-item *ngFor="let item of autocompleteItems1" (click)="selectSearchResult1(item)">
+              {{ item }}
+            </ion-item>
+          </ion-list>
+
+        <ion-label class="title_lbl">Recently visited countries</ion-label>
+
+        <ion-item detail="true" lines="full" *ngFor="let item of countries">
+            <ion-label>{{item}}</ion-label>
+        </ion-item>
+
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="goToHome()">
+            <ion-fab-button>
+                <ion-icon name="arrow-forward-sharp"></ion-icon>
+            </ion-fab-button>
+        </ion-fab>
+
+    </div>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border" mode="ios">
+    <ion-toolbar>
+        <ion-button size="small" fill="clear" slot="end" (click)="goToEditProfile()">
+            Edit
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <div class="back_user" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+        <ion-label class="name_lbl">Jonh Doe</ion-label>
+        <ion-label class="location_lbl">New York</ion-label>
+
+        <div class="flex_div" (click)="goToPaymentMethod()">
+            <ion-label>Payment Method</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+
+        <div class="flex_div" (click)="goToFriends()">
+            <ion-label>Invite Friends</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+
+        <div class="flex_div" (click)="goToAddresses()">
+            <ion-label>Manage Address</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+
+        <div class="flex_div" (click)="logout()">
+            <ion-label>Logout</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+
+    </div>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+      <ion-button (click)="goBack()" slot="start" fill="clear">
+          <ion-icon name="arrow-back-sharp" style="color: black;"></ion-icon>
+      </ion-button>
+      <ion-title>Add Address</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-content>
+        <div class="main_content_div">
+            <ion-label class="bold_lbl">Enter Address Detail</ion-label>
+
+            <ion-label class="small_lbl">Enter Location Name</ion-label>
+            <ion-input type="text" placeholder="Enter Name"></ion-input>
+
+            <ion-label class="small_lbl">Street</ion-label>
+            <ion-input type="number" placeholder="Street"></ion-input>
+
+            <ion-label class="small_lbl">Landmark</ion-label>
+            <ion-input type="number" placeholder="Landmark"></ion-input>
+
+            <ion-label class="small_lbl">Pincode</ion-label>
+            <ion-input type="number" placeholder="Pincode"></ion-input>
+
+            <ion-label class="small_lbl">City</ion-label>
+            <ion-input type="number" placeholder="City"></ion-input>
+            
+            <ion-button (click)="goToProfile()" expand="block">
+                Add Address
+            </ion-button>
+        </div>
+    </ion-content>
+</ion-content>
